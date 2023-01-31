@@ -1,0 +1,9 @@
+{
+  "generator-node": {
+    "promptValues": {
+      "authorName": "Ashwin Shetty",
+      "authorEmail": "shettyashwin@outlook.com",
+      "authorUrl": "https://github.com/shettyashwin"
+    }
+  }
+}

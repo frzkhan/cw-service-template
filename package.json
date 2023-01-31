@@ -1,0 +1,86 @@
+{
+  "name": "@cowellness/generator-cw-service",
+  "version": "1.0.11",
+  "description": "cowellness Generator for Services and UI",
+  "homepage": "https://gitlab.com/cowellness/iseo/documentation/-/wikis/home",
+  "author": {
+    "name": "Ashwin Shetty",
+    "email": "shettyashwin@outlook.com",
+    "url": "https://github.com/ShettyAshwin"
+  },
+  "files": [
+    "generators"
+  ],
+  "main": "generators/index.js",
+  "keywords": [
+    "yeoman-generator",
+    "cowellness",
+    "services",
+    "ui"
+  ],
+  "devDependencies": {
+    "eslint": "^6.5.1",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-config-xo": "^0.27.1",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.0.9",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.4.2",
+    "prettier": "^1.18.2"
+  },
+  "engines": {
+    "npm": ">= 4.0.0"
+  },
+  "dependencies": {
+    "yeoman-generator": "^4.1.0",
+    "chalk": "^2.4.2",
+    "yosay": "^2.0.2"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "scripts": {
+    "pretest": "eslint .",
+    "precommit": "lint-staged",
+    "test": "jest"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "eslintConfig": {
+    "extends": [
+      "xo",
+      "prettier"
+    ],
+    "env": {
+      "jest": true,
+      "node": true
+    },
+    "rules": {
+      "prettier/prettier": [
+        "error",
+        {
+          "singleQuote": true,
+          "printWidth": 90
+        }
+      ]
+    },
+    "plugins": [
+      "prettier"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.com:cowellness/generator-cw-service.git"
+  },
+  "publishConfig": {
+    "@cowellness:registry": "https://gitlab.com/api/v4/projects/20851578/packages/npm/"
+  }
+}
